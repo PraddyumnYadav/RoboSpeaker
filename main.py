@@ -14,7 +14,7 @@ def main():
 
 	while True:
 		# Get Text as Input from the User.
-		print("Please Enter the Text Which You Want this Programm to Play(Don't Include any Punctuation).")
+		print("Please Enter the Text Which You Want this Programm to Play (Don't Include any Punctuation).")
 		text = input(":- ")
 
 		# Selecting Language in Which We want to convert the Audio.
