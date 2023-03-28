@@ -2,6 +2,8 @@
 from gtts import gTTS # for converting text to speech
 from playsound import playsound # for Playing Converted Audio
 
+# Print Welcome Message.
+print("--------------------- Welcome to RoboSpeaker -----------------------")
 
 # Get Text as Input from the User.
 print("Please Enter the Text Which You Want this Programm to Play(Don't Include any Punctuation).")
