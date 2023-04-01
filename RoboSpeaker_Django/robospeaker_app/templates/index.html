@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +13,8 @@
 		<button type="submit">Convert</button>
 	</form>
 	{% if request.method == 'POST' %}
-		<audio src="{{ request.path_info }}" controls></audio>
-		<a href="{{ request.path_info }}" download>Download audio</a>
+    <audio src="{{ request.path_info }}" controls></audio>
+    <a href="{{ request.path_info }}" download="audio.mp3">Download audio</a>
 	{% endif %}
 </body>
 </html>

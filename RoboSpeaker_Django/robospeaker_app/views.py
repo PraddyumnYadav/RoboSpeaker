@@ -8,11 +8,8 @@ def convert_text(request):
         text = request.POST.get('text')
         language = "en"
         audio = gTTS(text=text, lang=language, slow=False)
-        audio_file = f"robospeaker_app/static/audio/{text[:10]}.mp3"
+        audio_file = os.path.join('robospeaker_app', 'static', 'audio', 'audio.mp3')
         audio.save(audio_file)
         return FileResponse(open(audio_file, 'rb'))
     else:
         return render(request, 'index.html')
-from django.shortcuts import render
-
-# Create your views here.
