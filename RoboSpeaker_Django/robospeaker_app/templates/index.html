@@ -1,20 +1,28 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
-<head>
-	<title>RoboSpeaker</title>
-</head>
-<body>
-	<h1>RoboSpeaker</h1>
-	<form method="post" action="{% url 'convert_text' %}">
-		{% csrf_token %}
-		<label for="text">Enter text:</label>
-		<input type="text" name="text" id="text" required>
-		<button type="submit">Convert</button>
-	</form>
-	{% if request.method == 'POST' %}
-    <audio src="{{ request.path_info }}" controls></audio>
-    <a href="{{ request.path_info }}" download="audio.mp3">Download audio</a>
-	{% endif %}
-</body>
+  <head>
+    <title>RoboSpeaker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-200">
+    <div class="container mx-auto mt-8">
+      <h1 class="text-3xl font-bold text-center">RoboSpeaker</h1>
+      <form method="post" action="{% url 'convert_text' %}" class="mt-8">
+        {% csrf_token %}
+        <label for="text" class="block font-medium">Enter text:</label>
+        <input type="text" name="text" id="text" required class="block w-full px-4 py-2 mt-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-48">
+        <button type="submit" class="block w-full px-4 py-2 mt-4 text-white bg-indigo-500 border border-transparent rounded-md shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+          Convert
+        </button>
+      </form>
+      {% if request.method == 'POST' %}
+        <div class="mt-8">
+          <audio src="{{ request.path_info }}" controls></audio>
+          <a href="{{ request.path_info }}" download="audio.mp3" class="block mt-4 text-indigo-500 hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Download audio</a>
+        </div>
+      {% endif %}
+    </div>
+  </body>
 </html>
