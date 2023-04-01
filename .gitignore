@@ -1,2 +1,3 @@
-/venv
+/venv/
 audio.mp3
+/RoboSpeaker_Django/RoboSpeaker_Django/__pycache__/
