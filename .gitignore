@@ -1,3 +1,6 @@
 /venv/
-audio.mp3
 /RoboSpeaker_Django/RoboSpeaker_Django/__pycache__/
+/RoboSpeaker_Django/db.sqlite3
+/RoboSpeaker_Django/robospeaker_app/__pycache__/
+/RoboSpeaker_Django/robospeaker_app/migrations/__pycache__/
+audio.mp3
