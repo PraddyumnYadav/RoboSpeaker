@@ -1,31 +1,34 @@
-# Importing Essentils
-import time # for using time.sleep()
-from gtts import gTTS # for converting text to speech
-import pygame # for playing the converted audio
-import soundfile as sf # for getting the length of the audio
+# Importing Essentials
+import time  # for using time.sleep()
+from gtts import gTTS  # for converting text to speech
+import pygame  # for playing the converted audio
+import soundfile as sf  # for getting the length of the audio
 
 
-
-# Creating Main Programm
+# Creating Main Program
 def main():
-	# Print Welcome Message.
-	print("--------------------- Welcome to RoboSpeaker -----------------------")
-	print("Please Enter the Text Which You Want this Programm to Play (Don't Include any Punctuation).")
-	print("Press 'q' to quit.")
+    # Print Welcome Message.
+    print("--------------------- Welcome to RoboSpeaker -----------------------")
+    print("Please Enter the Text Which You Want this Program to Play (Don't Include any Punctuation).")
+    print("Press 'q' to quit.")
 
-	while True:
-		# Get Text as Input from the User.
-		text = input(":- ")
+    while True:
+        # Get Text as Input from the User.
+        text = input(":- ")
 
-		# Selecting Language in Which We want to convert the Audio.
-		language = "en"
+        # Selecting Language in Which We want to convert the Audio.
+        language = "en"
 
-		# Exit the Programm if input is q
-		if text == "q":
-			break
+        # Exit the Program if input is q
+        if text == "q":
+            break
 
-		# Runnign Speak Function
-		speak(text, language)
+        # Run Speak Function with Error Handling
+        try:
+            speak(text, language)
+        except Exception as e:
+            print("An error occurred while processing your request:", e)
+            continue
 
 
 # Creating speak Function
