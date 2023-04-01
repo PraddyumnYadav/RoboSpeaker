@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RoboSpeaker</title>
+</head>
+<body>
+	<h1>RoboSpeaker</h1>
+	<form method="post" action="{% url 'convert_text' %}">
+		{% csrf_token %}
+		<label for="text">Enter text:</label>
+		<input type="text" name="text" id="text" required>
+		<button type="submit">Convert</button>
+	</form>
+	{% if request.method == 'POST' %}
+		<audio src="{{ request.path_info }}" controls></audio>
+		<a href="{{ request.path_info }}" download>Download audio</a>
+	{% endif %}
+</body>
+</html>
