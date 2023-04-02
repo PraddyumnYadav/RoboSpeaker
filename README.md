@@ -4,6 +4,7 @@
 - `gTTS` Library is used for converting **Text to Speech**.
 - `pygame` Library is used for playing the **converted audio**.
 - `soundfile` Library is used for obtaining **length of the audio**.
+- `Django` Library is used for **Displaying this as a Web Page**.
 - If You Find any Bugs in this Project or You can Make it better then don't hesistate to **Create and `Issue`** or **Open a `Pull Request`.**
 ## How to Get Started
 - Run given Commands to get Started with This Project on Your Local machine.
