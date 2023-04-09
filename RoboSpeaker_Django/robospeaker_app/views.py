@@ -9,6 +9,8 @@ def convert_text(request):
         language = "en"
         audio = gTTS(text=text, lang=language, slow=False)
         audio_file = os.path.join('robospeaker_app', 'static', 'audio', 'audio.mp3')
+        if os.path.exists(audio_file):
+            os.remove(audio_file)
         audio.save(audio_file)
         return render(request, 'index.html')
     else:
