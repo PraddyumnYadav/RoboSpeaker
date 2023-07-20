@@ -18,6 +18,10 @@ or
 ```
 git clone https://github.com/PraddyumnYadav/RoboSpeaker.git
 ```
+- Open The Project Directory.
+```
+cd RoboSpeaker
+```
 - Create a Virutal Enviornment.
 ```
 python -m venv venv
